@@ -15,6 +15,25 @@ int main()
     cin >> t;
     while (t--)
     {
+        ll n, res = 2;
+        cin >> n;
+        vll arr(n);
+        f(i, 0, n)
+        {
+            cin >> arr[i];
+        }
+        while (1)
+        {
+            set<ll> remainder;
+            f(i, 0, n)
+            {
+                remainder.insert(arr[i] % res);
+            }
+            if (remainder.size() == 2)
+                break;
+            res *= 2;
+        }
+        cout << res << endl;
     }
     return 0;
 }
